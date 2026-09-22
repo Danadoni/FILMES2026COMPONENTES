@@ -15,36 +15,10 @@ import Header from './src/header';
 import Search from './src/search';
 import CardFilmes from './src/cardFilmes';
 import Filmes from './data/filmes';
-
+import Rotas from './src/rotas';
 export default function App() {
   return (
-    <View style={styles.container}>
-
-
-        <Header />
-        <Search />
-        <Banner />
-
-     
-        <View style={{ width: '90%' }}>
-          <FlatList
-            showsHorizontalScrollIndicator={false}
-            horizontal={true}
-            data={Filmes}
-            keyExtractor={(item) => item.id}
-            renderItem={({ item }) => (
-              <CardFilmes
-                imagem={item.imagem}
-                nome={item.nome}
-                nota={item.nota}
-              />
-            )}
-          />
-        </View>
-
-      
-
-    </View>
+    <Rotas></Rotas>
   );
 }
 
